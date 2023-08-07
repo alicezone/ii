@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript 선행</title>
+</head>
+
+<body>
+  <h1>javascript</h1>
+  <h2>문자 데이터</h2>
+  <script>
+    let myName = "alice";
+    let email = "groove0628@naver.com";
+    let hello = `안녕! ${myName}야`;
+
+    console.log(myName);
+    console.log(email);
+    console.log(hello);
+
+  </script>
+
+  <h2>boolem 데이터</h2>
+  <script>
+    let checked = true;
+    let isShow = false;
+
+    console.log("checked : " + checked);
+    console.log(`isShow : ${isShow}`);
+  </script>
+
+  <h2>Undefied</h2>
+  <!-- 값이 할당되지 않음 -->
+  <script>
+    let undef;
+    let object = { abc: 123 };
+    console.log(undef);
+    console.log(object.abc);
+    console.log(object.xyz);
+    // 할당되지 않았다고 출력됨 abc가 아니니까
+  </script>
+  <h2>null</h2>
+  <!-- 의도적으로 비워놓음 -->
+  <script>
+    let empty = null;
+    console.log(empty);
+  </script>
+  <h2>객체 데이터</h2>
+  <script>
+    let user = {
+      name: "alice",
+      age: 100,
+      isValid: true,
+    };
+    console.log(user.name);
+    console.log(user.age);
+    console.log(user.isValid);
+  </script>
+
+  <h2>배열데이터</h2>
+  <script>
+    let fruites = ['apple', 'banana', 'cherry'];
+
+    console.log(fruites[0]);
+    console.log(fruites[1]);
+    console.log(fruites[2]);
+  </script>
+
+  <h2>변수</h2>
+  <script>
+    let a = 5;
+    let b = 10;
+
+
+    console.log(a + b);
+    console.log(a - b);
+    console.log(a * b);
+    console.log(a / b);
+
+    a = 50;
+    // 재할당 후 계산이 달라짐
+
+
+    console.log(`a: ${a}`);
+    console.log(a + b);
+    console.log(a - b);
+    console.log(a * b);
+    console.log(a / b);
+
+  </script>
+
+  <h2>const</h2>
+  <script></script>
+  let a = 5;
+  let b = 10;
+
+
+  console.log(a + b);
+  console.log(`b:${b}`);
+  console.log(a * b);
+  console.log(a / b);
+
+  a = 50;
+
+  console.log(`a: ${a}`);
+  console.log(a + b);
+  console.log(a - b);
+  console.log(a * b);
+  console.log(a / b);
+
+  b = 100;
+  console.log(`b:${b}`);
+
+  </script>
+  <h2>Function</h2>
+  <script>
+    // 함수선언
+    function helloFunc() {
+      // 실행코드
+      console.log(1 + 2);
+    }
+    // 함수호출
+    helloFunc();
+
+    // 함수내보내기
+    function returnFunc() {
+      return 1 + 2;
+    }
+
+    let returnA = returnFunc();
+    console.log(returnA);
+
+    // 함수의 재사용
+    function sum(c, d) {
+      return c + d;
+    }
+
+    let newA = sum(10, 5);
+    let newB = sum(30, 50);
+
+    console.log(newA, newB)
+
+    // 익명함수
+    let world = function () {
+      console.log('world');
+    }
+    world();
+  </script>
+
+  <h2>조건문</h2>
+  <script>
+    let sleep = true;
+    let have = true;
+    // let have = false;
+
+    if (sleep) {
+      console.log("ㅠㅠ")
+    }
+
+    if (have) {
+      console.log("^^");
+      // 트루가되면 출력된다
+    }
+
+    let math = false;
+
+    if (math) {
+      // 참일경우
+      console.log("참잘했어요.")
+    } else {
+      // 거짓일 경우
+      console.log("좀 더 노력하세요.")
+    }
+  </script>
+
+  <h2>요소찾기</h2>
+  <div class="box">Box!!클릭했을때console에 출력된다</div>
+
+  <script>
+    let boxEl = document.querySelector(".box");
+    boxEl.addEventListener("click", function () {
+      // 실행코드
+      console.log("click");
+    });
+  </script>
+
+  <div class="box2">box2</div>
+  <script>
+    // html 요소 찾기 검색
+    let box2El = document.querySelector(".box2");
+    box2El.classList.add("active");
+    // div clss에 box2 active라는 클래스를 추가한다 html elements를 보면 나온다
+    // <div class="box2 active ..." 내가 쓰지도 않았는데 클래스 이름이 바뀌었다
+
+    let isContains = box2El.classList.contains("active");
+    // contains는 그 안에 그 변수가 있니? 확인하는거
+    console.log(isContains);
+
+    box2El.classList.remove("active");
+    console.log(box2El.classList.contains("active"));
+// 클레스네임에 active를 삭제시켜. active 있니? 삭제됐으니까 false로 출력된다.
+
+  </script>
+
+  <h2>forEach</h2>
+  <div class="box3">1</div>
+  <div class="box3">2</div>
+  <div class="box3">3</div>
+  <div class="box3">4</div>
+
+  <!-- 쿼리셀렉터 all로 해야 박스 4개가 다 잡힌다 -->
+  <script>
+    let box3Els = document.querySelectorAll(".box3");
+    console.log(box3Els);
+
+    // index는 순서함수일때 사용
+    box3Els.forEach(function (box3El, index) {
+      // box3El.classList.add("order");
+      // for는 반복, each는 각각
+      // class네임에 4개에 모두 오더가 추가되었다
+      box3El.classList.add(`order-${index + 1}`);
+      // 요즘에는 코드를 이렇게 쓴다.
+      console.log("index, boxEl")
+    });
+  </script>
+
+  <h2>Getter, Setter</h2>
+  <div class="box4">1</div>
+  <div class="box4">2</div>
+  <div class="box4">3</div>
+  <div class="box4">4</div>
+
+  <script>
+    let box4El = document.querySelector(".box4");
+    // Getter, 값을 얻는 용도
+    console.log(box4El.textContent);
+
+    // Setter는 값을 지정하는 용도
+    box4El.textContent = "odada";
+    // 위어꺼 안되 물어봐
+    console.log(box4El.textContent);
+  </script>
+
+</body>
+
+</html>

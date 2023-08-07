@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display / css</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+      text-decoration: none;
+      line-height: 1.5;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>display</h1>
+  <h2>block(기본값)</h2>
+  <div class="box1">글씨</div>
+  <style>
+    .box1 {
+      width: 200px;
+      height: 100px;
+      background: #ff0f8b;
+    }
+  </style>
+
+  <h2>inline(글자한개) / inline-block(가로세로 값 가능, 글자처럼 옆으로 배치)</h2>
+  <a href="#" class="box2">링크1</a>
+  <a href="#" class="box2">링크2</a>
+  <a href="#" class="box2">링크3</a>
+  <style>
+    .box2 {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      background: #ff0000;
+      border: 1px solid #000;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 10px;
+    }
+  </style>
+
+  <h2>none(컨텐츠 없앰)</h2>
+  <div class="box3">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <style>
+    .box3 {
+      display: flex;
+    }
+
+    .box3 div {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #c83939;
+      background: #3a91f5;
+
+    }
+
+    .box3 div:first-child {
+      display: none;
+    }
+
+    .box3 div:nth-child(2) {
+      visibility: hidden;
+    }
+  </style>
+
+  <h2>flex</h2>
+  <div class="box-g box4">
+    <!-- box-g는 공통클래스라는 뜻 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+  <style>
+    /* 공통클래스 */
+    .box-g {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f2f2f2;
+    }
+
+    .box-g div {
+      width: 100px;
+      height: 100px;
+      /* margin-right: 10px; */
+      border: 1px solid #c5df40;
+      background: #43efa1;
+    }
+
+    .box4 {
+      display: flex;
+      /* 원래 div는 블록코딩이라서 세로로정렬된다 flex를 주면 전체 가로로 정렬된다 */
+    }
+
+    .box4 div:nth-child(4) {
+      margin-right: 0;
+      /* 마진 전부다 10px를 넣고 우측에 끝 상자에는 안넣고 싶을때  */
+    }
+  </style>
+  <br />
+  <div class="box-g box5">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    .box5 {
+      display: flex;
+      /* div는 세로인데 flex는 가로로 정렬해줌 */
+      flex-direction: column;
+      /* 세로방향 정렬로 바뀜 */
+      flex-direction: column-reverse
+        /* 순서가 뒤집힌다 */
+    }
+  </style>
+
+  <div class="box-g box6">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+
+  <style>
+    .box6 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+
+  <div class="box-g box7">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    .box7 {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+  <div class="box-g box8">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    .box8 {
+      display: flex;
+      justify-content: flex-start;
+    }
+  </style>
+
+  <div class="box-g box9">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    .box9 {
+      display: flex;
+      justify-content: flex-end;
+    }
+  </style>
+
+  <div class="box-g box10">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    .box10 {
+      display: flex;
+      justify-content: space-around;
+    }
+  </style>
+
+  <div class="box-g box11">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    .box11 {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+  </style>
+
+  <div class="box-g box12">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    .box12 {
+      height: 300%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+
+  <h2>items</h2>
+  <div class="box-g box13">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    .box13 {
+      display: flex;
+    }
+
+    .box13 div:first-child {
+      order: 2;
+    }
+
+    .box13 div:nth-child(2) {
+      order: 3;
+    }
+  </style>
+  <h2>flex-grow</h2>
+  <div class="box-g box14">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    /* flex-grow 비율에 따라 늘어나며 수치값이 유동적으로 가로값에 따라 달라진다 반응형 */
+    .box14 {
+      display: flex;
+    }
+
+    .box14 div {
+      width: auto;
+    }
+
+    .box14 div:nth-child(1) {
+      flex-grow: 1;
+    }
+
+    .box14 div:nth-child(2) {
+      flex-grow: 1;
+    }
+
+    .box14 div:nth-child(3) {
+      flex-grow: 2;
+    }
+  </style>
+  <h2>flex-shrink</h2>
+  <div class="box-g box15">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+  <style>
+    .box15 {
+      display: flex;
+    }
+
+    .box15 div:nth-child(3) {
+      flex-shrink: 0;
+    }
+  </style>
+  <div class="box-g box16">
+    <div>가</div>
+    <div>가나</div>
+    <div>가나다라</div>
+  </div>
+  <style>
+    .box16 {
+      display: flex;
+    }
+
+    .box16 div {
+      /* 1:1:2 비율로 나누고 싶은데...
+      flex-basis:auto;(기본값)글자갯수만큼 가로 사이즈가 늘어남 
+      flex-basis: 0;으로 넣어줌 글자갯수 상관없이 비율대로 배치*/
+      flex-basis: 0;
+      width: auto;
+      text-align: center;
+    }
+
+    /* 가상선택자 :nth-child(-n+5)	같은 요소 중 1번째부터 5번째까지 요소
+:nth-child(n+5)	같은 요소 중 5번째 이후 모든 요소 */
+    .box16 div:nth-child(-n+2) {
+      flex-grow: 1;
+    }
+
+    .box16 div:last-child {
+      flex-grow: 3;
+    }
+  </style>
+</body>
+
+</html>

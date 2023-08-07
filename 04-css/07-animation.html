@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>animation</h1>
+  <div class="box1">
+    <div class="ani"></div>
+  </div>
+  <style>
+    .box1 {
+      position: relative;
+      height: 500px;
+      background: lightgray;
+    }
+
+    .ani {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background: red;
+      animation-name: ani-box;
+      animation-duration: 4s;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes ani-box {
+      0% {
+        background: red;
+        top: 0;
+        left: 0;
+      }
+
+      25% {
+        background: orange;
+        top: 0;
+        left: calc(100% - 200px);
+      }
+
+      50% {
+        background: yellow;
+        top: 300px;
+        left: 700px;
+      }
+
+      75% {
+        background: green;
+        top: 300px;
+        left: 0;
+      }
+
+      100% {
+        background: purple;
+        top: 0;
+        left: 0;
+      }
+    }
+  </style>
+
+  <div class="box2">
+    <div class="square"></div>
+    <div class="circle"></div>
+
+  </div>
+
+  <h2>가운데 정렬:transform</h2>
+  <div class="box5">
+    <div class="item"></div>
+  </div>
+  <style>
+    .box5 {
+      position: relative;
+      height: 500px;
+      background: lightpink;
+    }
+
+    /* 무슨말인지는 모르겠지만  %로 상대치의 가운데 정렬로 정렬하는 법
+    잘모르겠지만 엄청 많이 쓰는 코딩 방법이래 */
+    .box5 .item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20%;
+      height: 20%;
+      background: blue;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+</body>
+
+</html>

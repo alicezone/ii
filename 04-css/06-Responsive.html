@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive | css</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      text-decoration: none;
+      box-sizing: border-box;
+      list-style: none;
+      color: rgb(0, 0, 0);
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box-g box1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    .box1 {
+      display: flex;
+    }
+
+    .box1 div {
+      flex-grow: 1;
+      height: 300px;
+      background: lightgray;
+      border: 10px dotted #000;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      /* body {
+        background-color: olive;
+      } 600이상일때 미디어쿼리가 동작해 올리브색으로 bg바뀜*/
+      .box1 {
+        flex-direction: column;
+      }
+
+      /* 600이상일때 세로 정렬로 바뀜 */
+    }
+  </style>
+  <br><br><br><br><br><br><br><br><br><br><br>
+  <div class="box-g box2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <style>
+    /* .box2{}안써도됨, 모바일에서 데스크탑으로*/
+    @media screen and (min-width: 600px) {
+      .box2 div {
+        float: left;
+        width: 33.333%;
+      }
+    }
+
+    /* 600이하일때 하얗게 되고 이상일때 그린색 */
+    /* body {
+        background-color: lightgreen;
+      } */
+  </style>
+  <h2>layout</h2>
+  <div class="wrap">
+    <header class="box">
+      <h1>logo</h1>
+      <nav>Navigation Menu</nav>
+    </header>
+    <div class="container">
+      <div class="content box">content</div>
+      <div class="content box">content</div>
+      <div class="content box">content</div>
+    </div>
+    <footer class="box">
+      <h1>logo</h1>
+      <div class="copyright">copyright</div>
+      <div class="sns">sns</div>
+    </footer>
+  </div>
+  <style>
+    .box {
+      margin: 20px;
+      background: lightgray;
+    }
+
+    .wrap {
+      width: 1200px;
+      margin: auto;
+      padding: 20px;
+      background-color: lightcyan;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      height: 100px;
+    }
+
+    header h1 {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .content {
+      flex-grow: 1;
+      height: auto;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      height: 100px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      .wrap {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .content {
+        height: auto;
+      }
+
+      footer {
+        flex-direction: column;
+        height: auto;
+      }
+    }
+  </style>
+</body>
+
+</html>

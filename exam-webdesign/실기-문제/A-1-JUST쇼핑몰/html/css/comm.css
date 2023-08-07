@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* 마패리스리하삐지보박텍스트데코넌컬기본텍 */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.5;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #222328;
+}
+
+.wrap {
+  background: lightgoldenrodyellow;
+  width: 1200px;
+  margin: auto;
+}
+
+header {
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.slide {
+  background: lightcoral;
+  height: 300px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  background: red;
+  height: 200px;
+}
+
+section {
+  width: 30%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: lightpink;
+  border-top: 1px solid #000;
+  height: 100px;
+}
+
+.copylight {
+  text-align: center;
+}
+
+.logo-foot img {
+  width: 50%;
+  filter: grayscale(100%);
+}

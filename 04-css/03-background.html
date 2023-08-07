@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background / css</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      text-decoration: none;
+      box-sizing: border-box;
+      list-style: none;
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>background</h1>
+  <h2>background-color</h2>
+  <strong>background-color</strong>
+  <div class="bg1">background-color</div>
+  <style>
+    body {
+      background-color: #222;
+      color: aliceblue;
+
+    }
+
+    .bg1 {
+      width: 100%;
+      height: 100px;
+      background-color: #d0f549;
+    }
+  </style>
+
+  <h2>background-attachment</h2>
+  <div class="box2"></div>
+  <style>
+    .box2 {
+      height: 300px;
+      background-image: url("https://images.unsplash.com/photo-1688507383637-78f49f095269?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+      background-attachment: fixed;
+      background-size: 100% auto;
+    }
+  </style>
+
+  <h2>background-image</h2>
+  <div class="box1"></div>
+  <style>
+    .box1 {
+      height: 200vh;
+      border: 10px solid #000;
+      background-image: url("https://avatars.githubusercontent.com/u/10627436?v=4");
+      background-color: #fff;
+      background-repeat: no-repeat;
+      /* /* background-position: 100% 0;  오른쪽 상단 */
+      /* background-position: 0 100%; 왼쪽하단 */
+      /* background-position: bottom left; 실무에서는 이렇게 거의 안쓴다*/
+      background-position: 0 0;
+      /* background-attachment: fixed; */
+      background-size: 200px auto;
+    }
+  </style>
+  <h2>background-size</h2>
+  <div class="box box3"></div>
+  <br>
+  <div class="box box4"></div>
+
+  <style>
+    .box {
+      width: 800px;
+      height: 300px;
+      border: 10px solid #000;
+      background-image: url("https://avatars.githubusercontent.com/u/10627436?v=4");
+      background-repeat: no-repeat;
+    }
+
+    .box3 {
+      /* logo, 아이콘: 잘리면 안되는 이미지 */
+      background-size: contain;
+    }
+
+    .box4 {
+      background-size: cover;
+      /* 배경이미지: 박스를 채우는 이미지 */
+      background-position: 0 -180px;
+    }
+  </style>
+</body>
+<h1>Sprite</h1>
+
+<div class="wrap">
+  <div class="img-g sprite1"></div>
+  <div class="img-g sprite2"></div>
+  <div class="img-g sprite3"></div>
+  <div class="img-g sprite4"></div>
+</div>
+
+<style>
+  .wrap {
+    display: flex;
+  }
+
+  .img-g {
+    background-image: url("./image/sprite.png");
+    background-repeat: no-repeat;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  .sprite1 {
+    width: 134px;
+    height: 132px;
+    /* background: url("./image/sprite.png") no-repeat 0 0; */
+    background-position: 0 0;
+  }
+
+  .sprite2 {
+    width: 40px;
+    height: 38px;
+    /* background: url("./image/sprite.png") no-repeat -140px 0; */
+    background-position: -140px 0;
+  }
+
+  .sprite3 {
+    width: 40px;
+    height: 40px;
+    /* background: url("./image/sprite.png") no-repeat -140px 0; */
+    background-position: -140px -60px;
+  }
+
+  .sprite3:hover {
+    background-position: -140px -340px;
+  }
+
+  .sprite4 {
+    width: 32px;
+    height: 32px;
+    /* background: url("./image/sprite.png") no-repeat -140px 0; */
+    background-position: -200px 0;
+  }
+
+  .sprite4:hover {
+    background-position: -240px 0;
+  }
+
+  .sprite4:active {
+    background-position: -280px 0;
+  }
+
+  .sprite4:visited {
+    background-position: -320px 0;
+  }
+</style>
+
+</html>
+<br><br><br><br><br><br>

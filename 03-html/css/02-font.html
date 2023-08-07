@@ -1,0 +1,116 @@
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+  <title>font / css</title>
+  <!-- 웹디자인기능사용 reset -->
+  <style>
+    * {
+      font-size: 60px;
+      font-family: 'Kablammo', cursive;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      color: #222328;
+      /* text-decoration: none; */
+      list-style: none;
+      box-sizing: border-box;
+      /* 안전글꼴 */
+      font-family: "Malgun Gothic",
+        "맑은 고딕",
+        helvetica,
+        "Apple SD Gothic Neo",
+        sans-serif;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>font</h1>
+  <h2>일반</h2>
+  <div class="font1">
+    <strong>타이틀</strong>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis explicabo animi maiores error! Nemo quidem
+      cupiditate reprehenderit adipisci quo fugit quaerat a veniam ut excepturi, commodi delectus sunt consectetur.
+      Doloribus.</p>
+    <!-- em태그 절대값 60px -->
+    <em>기울어짐<br><span>기울어짐</span></em><br>
+    <!-- b태그 상대값 60px -->
+    <b>기울어짐<br><span>기울어짐</span></b>
+  </div>
+  <style>
+    .font1 strong {
+      font-family: "orbit", sans-serif;
+      font-size: 40px;
+      font-weight: normal;
+    }
+
+    .font1 p {
+      font-family: "나눔고딕";
+      font-size: 16px;
+    }
+
+    .font1 em {
+      font-style: normal;
+      font-size: 60px;
+      /* font-weight: bold; */
+    }
+
+    .font em span {
+      /* font-size: 60px; */
+      /* em 엄마 태그를 기준으로 */
+      font-size: 1em;
+    }
+
+    .font1 b {
+      font-size: 3.750em;
+    }
+
+    .font b span {
+      /* font-size: 60px; */
+      /* rem : html,body 태그 기준 */
+      font-size: 1rem;
+    }
+  </style>
+
+  <h2>font size</h2>
+  <strong>vw</strong>
+  <div class="vw">Responsive Text</div>
+  <style>
+    .vw {
+      font-size: 17vw;
+    }
+
+    .vh {
+      font-size: 10vh;
+    }
+  </style>
+  <h2>text</h2>
+  <strong>vertical align</strong>
+  <div class=ver""></div>
+  <img src="./images/img_girl.jpg" alt="유투브">유투브
+  <style>
+    .ver {
+      font-size: 30px;
+    }
+
+    .ver img {
+      vertical-align: middle;
+    }
+  </style>
+
+  <strong>decoration</strong>
+  <a href="#">나는 글씨야 너는 뭐니?</a>
+  <style>
+    a {
+      text-decoration: none;
+    }
+  </style>
+</body>
+
+</html>

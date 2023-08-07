@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스모델 / css</title>
+  <!-- reset -->
+  <!-- <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style> -->
+</head>
+
+<body>
+  <h1>박스모델</h1>
+  <h2>가로사이즈</h2>
+
+  <div class="box1">
+    <!-- span 태그는 인라인태그 :width, height 안들어감 -->
+    <span>span 태그</span>
+    <span>span 태그</span>
+    <!-- div 블럭태그 : width, height 값이 auto로 들어감 -->
+    <div>div 태그</div>
+    <div>div 태그</div>
+  </div>
+
+  <style>
+    .box1 {
+      background: #ff5b5b;
+    }
+
+    .box1 span {
+      /* width: auto; */
+      /* width: 100px; */
+      /* height: 100px; */
+      background: #f2da6f;
+    }
+
+    .box1 div {
+      /* width: auto; */
+      width: 50%;
+      /* height: 50; */
+      background: #56e1b5;
+    }
+  </style>
+  <br><br><br><br>
+  <h2>세로사이즈</h2>
+  <div class="box2">
+    <div></div>
+  </div>
+  <style>
+    .box2 {
+      background: #3773ff;
+    }
+
+    box2 div {
+      height: 100vh;
+      background: #a6c048;
+    }
+  </style>
+  <h2>max-width</h2>
+  <div class="box3">max-width</div>
+  <style>
+    .box3 {
+      max-width: 600px;
+      min-width: 320px;
+      height: 100px;
+      margin: auto;
+      background: #36efae;
+    }
+  </style>
+  <h2>margin</h2>
+  <div class="box4">
+    <div class="box4-1"></div>
+    <div class="box4-2"></div>
+    <div class="box4-3"></div>
+    <div class="box4-4"></div>
+    <div class="box4-5"></div>
+    <div class="box4-6"></div>
+  </div>
+  <style>
+    .box4 {
+      margin: 10px 20xp 30px 40px;
+      background: #7700ff;
+    }
+
+    .box4 div {
+      width: 100px;
+      height: 100px;
+      background: #ba1ca0;
+    }
+
+    .box4 .box4-1 {
+      margin-top: 100px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .box4 .box4-2 {
+      margin: 50px;
+    }
+
+    .box4 .box4-3 {
+      margin: 100px 50px;
+    }
+
+    .box4 .box4-4 {
+      margin: 200px 300px 400px;
+    }
+
+    .box4 .box4-5 {
+      margin: 0 auto;
+    }
+
+    .box4 .box4-6 {
+      margin: inherit;
+    }
+  </style>
+  <h2>padding</h2>
+  <div class="box5">
+    <div>padding1</div>
+    <div>padding2</div>
+    <div>padding3</div>
+    <br>
+    <div>padding4(w100 h100)</div>
+    <div>padding5(w100 h100)</div>
+    <div>padding6(w100 h100)</div>
+    <div>padding7(w100 h100)</div>
+    <!-- padding: 10px 30px -->
+  </div>
+  <style>
+    .box5 div {
+      width: 100px;
+      height: 100px;
+      background: #f5d959;
+      border: 1px solid #80e96e;
+    }
+  </style>
+  <style>
+    .box5 div {
+      display: inline-block;
+      border: 2px solid #20b06d;
+      background: #efffda;
+    }
+
+    .box5 div:first-child {
+      padding: 10px;
+    }
+
+    .box5 div:nth-child(2) {
+      margin: 0 50px;
+      padding: 20px 50px;
+    }
+
+    .box5 div:nth-child(3) {
+      padding: 20px 100px 50px;
+    }
+
+    .box5 div:nth-child(4) {
+      padding: 20px 100px 50px;
+    }
+
+    .box5 div:nth-child(5) {
+      padding: 20px 100px 50px;
+    }
+
+    .box6 div:nth-child(2) {
+      width: 60px;
+      height: 60px;
+      padding: 20px;
+    }
+
+    .box6 div:nth-child(4) {
+      width: 60px;
+      height: 60px;
+      padding: 20px;
+    }
+  </style>
+  <h2>border</h2>
+  <div class="box7">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <style>
+    .box7 div {
+      width: 100px;
+      height: 100px;
+      background: #cc3333;
+    }
+
+    .box7 div:first-child {
+      border: 5px solid #72ec45;
+      border-radius: 25px;
+    }
+
+    .box7 div:nth-child(2) {
+      border: 20px dotted #4574ec;
+      box-sizing: border-box;
+    }
+
+    .box7 div:nth-child(3) {
+      border-left: 6px solid #ff0000;
+    }
+
+    .box7 div:nth-child(4) {
+      border-bottom: 1px solid #000;
+    }
+  </style>
+
+</body>
+
+</html>
